@@ -1,0 +1,155 @@
+/* INVISIBLE NAVBAR */
+.nav-invisible {
+  width: 100%;
+  padding: 18px 60px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  opacity: 1 !important;
+}
+
+/* Role text - STYLISH VERSION */
+.nav-role {
+  font-size: 0.95rem;
+  opacity: 0.75;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #000;
+  font-family: "Inter", sans-serif;
+}
+
+/* Role letters for individual animation */
+.role-letter {
+  display: inline-block;
+  transform-origin: center bottom;
+}
+
+/* Hyphen styling */
+.role-hyphen {
+  display: inline-block;
+  margin: 0 1px;
+  opacity: 0.9;
+}
+
+/* Right Menu */
+.nav-menu {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+}
+
+.nav-menu li {
+  font-size: 1rem;
+  opacity: 0.75;
+  cursor: pointer;
+  transition: 0.2s;
+  font-weight: 500;
+}
+
+.nav-menu li:hover {
+  opacity: 1;
+}
+
+/* Resume underline */
+.resumeNav {
+  border-bottom: 2px solid #000;
+  padding-bottom: 3px;
+}
+
+/* MOBILE MENU BUTTON */
+.hamburger-mini {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger-mini span {
+  width: 22px;
+  height: 2px;
+  background: #000;
+  display: block;
+}
+
+/* MOBILE MENU BOX - EXACTLY SAME AS BEFORE */
+.mobile-minimal-menu {
+  position: fixed;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  background: #e9e8e2;
+  z-index: 100;
+  padding: 2rem;
+  transition: 0.4s;
+}
+
+.mobile-minimal-menu.show {
+  top: 0;
+}
+
+.mobile-minimal-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.mobile-minimal-menu li {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+/* ONLY CLOSE BUTTON ADDED */
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 2rem;
+  cursor: pointer;
+  opacity: 0.7;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.close-btn:hover {
+  opacity: 1;
+}
+
+/* HIDE DESKTOP MENU ON MOBILE */
+@media (max-width: 900px) {
+  .nav-menu {
+    display: none;
+  }
+
+  .hamburger-mini {
+    display: flex;
+  }
+  
+  /* Mobile role text */
+  .nav-role {
+    font-size: 0.85rem;
+    letter-spacing: 0.3px;
+  }
+}
+
+/* Ensure smooth initial state */
+.nav-invisible,
+.nav-role,
+.nav-menu li,
+.hamburger-mini {
+  visibility: visible !important;
+}
+
+/* Performance optimizations */
+.role-letter,
+.nav-menu li {
+  will-change: transform, opacity;
+}

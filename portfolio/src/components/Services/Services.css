@@ -1,0 +1,437 @@
+:root {
+  --cream-bg: #EEEDE8;
+  --warm-grey: #E7E6DF;
+  --text-dark: #000000;
+  --text-muted: rgba(0, 0, 0, 0.75);
+  --divider-light: rgba(0, 0, 0, 0.10);
+  --divider-subtle: rgba(0, 0, 0, 0.06);
+  --number-opacity: 0.4;
+}
+
+/* Remove any overflow hidden and ensure proper flow */
+#services {
+  overflow: visible;
+}
+
+/* TOP SECTION - CREAM BACKGROUND */
+.services-top-section {
+  background: var(--cream-bg);
+  padding: 120px 7% 60px;
+  position: relative;
+  z-index: 2;
+  overflow: visible;
+}
+
+.services-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  overflow: visible;
+}
+
+.services-title {
+  font-size: 6rem;
+  font-weight: 700;
+  letter-spacing: -2px;
+  margin: 0;
+  color: var(--text-dark);
+  opacity: 1;
+  line-height: 0.9;
+}
+
+.services-right {
+  max-width: 500px;
+  position: relative;
+  margin-top: 10px;
+}
+
+.services-mini {
+  font-size: 0.8rem;
+  opacity: 1;
+  margin-bottom: 12px;
+  letter-spacing: 1.2px;
+  color: var(--text-dark);
+  text-transform: uppercase;
+}
+
+.services-desc {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  opacity: 1;
+  margin: 0;
+  color: var(--text-dark);
+  font-weight: 400;
+}
+
+/* SUBTLE DIVIDER BETWEEN SECTIONS */
+.services-divider {
+  width: 100%;
+  height: 0.5px;
+  background: var(--divider-light);
+  margin: 0;
+}
+
+/* WARM GREY BACKGROUND SECTION */
+.services-warm-section {
+  background: var(--warm-grey);
+  padding: 80px 7% 80px;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  position: relative;
+  overflow: visible;
+  min-height: auto;
+  height: auto;
+}
+
+/* SERVICE BLOCKS - COMPACT LAYOUT */
+.service-block {
+  position: relative;
+  z-index: 2;
+  padding: 50px 0;
+  opacity: 1;
+  visibility: visible;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 60px;
+  align-items: start;
+}
+
+/* LEFT CONTENT - TITLE AND DESCRIPTION */
+.service-left-content {
+  width: 100%;
+}
+
+/* Service title with number - COMPACT */
+.service-title {
+  font-size: 2.8rem;
+  font-weight: 600;
+  margin: 0 0 20px 0;
+  color: var(--text-dark);
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  letter-spacing: -0.5px;
+  line-height: 1.1;
+}
+
+/* Number before title */
+.service-title::before {
+  content: attr(data-number);
+  font-size: 2.2rem;
+  opacity: var(--number-opacity);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.5px;
+}
+
+.service-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  margin-bottom: 0;
+  max-width: 100%;
+  font-weight: 400;
+}
+
+/* RIGHT CONTENT - TECH STACK */
+.service-right-content {
+  width: 100%;
+  padding-top: 10px;
+}
+
+/* TECH LIST - COMPACT */
+.tech-list {
+  width: 100%;
+}
+
+.tech-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 1rem;
+  margin: 0 0 18px 0;
+  color: var(--text-muted);
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.tech-row:last-child {
+  margin-bottom: 0;
+}
+
+.tech-row span {
+  opacity: 0.4;
+  width: 22px;
+  font-variant-numeric: tabular-nums;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-top: 1px;
+  flex-shrink: 0;
+}
+
+.tech-row p {
+  margin: 0;
+  flex: 1;
+}
+
+/* LINE DIVIDER - SUBTLE */
+.line {
+  width: 100%;
+  height: 0.5px;
+  background: var(--divider-subtle);
+  margin: 0;
+  position: relative;
+  z-index: 1;
+  transform-origin: left center;
+}
+
+/* ANIMATION STATES */
+.services-top-section,
+.services-warm-section {
+  opacity: 1;
+}
+
+.services-title,
+.services-mini,
+.services-desc {
+  opacity: 0;
+}
+
+.line {
+  transform: scaleX(0);
+}
+
+.service-block {
+  opacity: 0;
+}
+
+/* Responsive tweaks */
+@media (max-width: 1200px) {
+  .services-top-section {
+    padding: 100px 5% 50px;
+  }
+  
+  .services-warm-section {
+    padding: 70px 5% 70px;
+  }
+  
+  .service-block {
+    max-width: 100%;
+    padding: 45px 5%;
+    gap: 50px;
+  }
+  
+  .services-title {
+    font-size: 5rem;
+  }
+  
+  .service-title::before {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 980px) {
+  .services-header {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .services-title {
+    font-size: 4rem;
+  }
+
+  .service-block {
+    padding: 40px 5%;
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .service-title {
+    font-size: 2.2rem;
+    gap: 15px;
+  }
+  
+  .service-title::before {
+    font-size: 1.8rem;
+  }
+  
+  .services-right {
+    max-width: 100%;
+  }
+  
+  .service-right-content {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-top-section {
+    padding: 80px 5% 40px;
+  }
+  
+  .services-warm-section {
+    padding: 60px 5% 60px;
+  }
+
+  .services-title {
+    font-size: 3.2rem;
+  }
+  
+  .service-block {
+    padding: 35px 5%;
+  }
+  
+  .service-title {
+    font-size: 2rem;
+    gap: 12px;
+  }
+  
+  .service-title::before {
+    font-size: 1.6rem;
+  }
+  
+  .service-text {
+    font-size: 1.05rem;
+  }
+  
+  .tech-row {
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 560px) {
+  .services-warm-section {
+    padding: 50px 5% 50px;
+  }
+  
+  .services-title {
+    font-size: 2.5rem;
+  }
+
+  .service-block {
+    padding: 30px 5%;
+  }
+
+  .service-title {
+    font-size: 1.8rem;
+    gap: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 15px;
+  }
+  
+  .service-title::before {
+    font-size: 1.4rem;
+    margin-bottom: 2px;
+  }
+
+  .service-text {
+    font-size: 1rem;
+  }
+
+  .tech-row {
+    font-size: 0.9rem;
+    gap: 10px;
+    margin-bottom: 12px;
+  }
+  
+  .tech-row span {
+    font-size: 0.85rem;
+    width: 20px;
+  }
+}
+
+@media (max-width: 380px) {
+  .services-top-section {
+    padding: 60px 5% 30px;
+  }
+  
+  .services-warm-section {
+    padding: 40px 5% 40px;
+  }
+  
+  .services-title {
+    font-size: 2rem;
+  }
+  
+  .service-title {
+    font-size: 1.6rem;
+  }
+  
+  .service-title::before {
+    font-size: 1.2rem;
+  }
+  
+  .tech-row {
+    font-size: 0.85rem;
+  }
+}
+/* Add this to your existing Services.css */
+
+/* MOBILE COMPACT LAYOUT */
+@media (max-width: 768px) {
+  .services-top-section {
+    padding: 60px 5% 30px !important; /* Reduced padding */
+  }
+  
+  .services-warm-section {
+    padding: 40px 5% 40px !important; /* Reduced padding */
+  }
+  
+  .service-block {
+    padding: 25px 0 !important; /* Reduced block padding */
+    gap: 20px !important;
+  }
+  
+  .service-title {
+    font-size: 1.6rem !important; /* Smaller title */
+    margin-bottom: 12px !important;
+    gap: 8px !important;
+  }
+  
+  .service-title::before {
+    font-size: 1.2rem !important; /* Smaller number */
+  }
+  
+  .service-text {
+    font-size: 0.95rem !important; /* Smaller text */
+    line-height: 1.5 !important; /* Tighter line height */
+    margin-bottom: 15px !important;
+  }
+  
+  .tech-row {
+    margin-bottom: 10px !important; /* Reduced gap between tech items */
+    font-size: 0.9rem !important;
+  }
+  
+  .services-desc {
+    font-size: 1rem !important;
+    line-height: 1.5 !important;
+  }
+}
+
+/* EXTRA COMPACT FOR SMALL PHONES */
+@media (max-width: 480px) {
+  .service-block {
+    padding: 20px 0 !important;
+  }
+  
+  .service-title {
+    font-size: 1.4rem !important;
+  }
+  
+  .service-text {
+    font-size: 0.9rem !important;
+    margin-bottom: 12px !important;
+  }
+  
+  .tech-row {
+    margin-bottom: 8px !important;
+    font-size: 0.85rem !important;
+  }
+}

@@ -1,0 +1,19 @@
+.apple-preloader-wrapper {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  background: transparent !important;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  pointer-events: none;
+  overflow: hidden;
+  transition: opacity 0.2s ease;
+}
+
+.apple-bar {
+  height: 6px;
+  width: 0%;
+  background: #000;
+  border-radius: 4px;
+}

@@ -1,0 +1,501 @@
+/* OTHER PAGES NAVBAR - TRANSPARENT BACKGROUND */
+.otherPagesNav {
+  width: 100%;
+  height: 70px;
+  background: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 30px;
+}
+
+/* SIMPLE HAMBURGER MENU BUTTON - 2 LINES WITH CREAM CIRCLE */
+.otherPages-mobile-menu-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 10000;
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+.simple-hamburger {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #EEEDE8; /* Cream background */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.simple-hamburger span {
+  display: block;
+  height: 2px;
+  width: 20px;
+  background: #000000; /* Black lines on cream circle */
+  border-radius: 1px;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+/* Hamburger to Cross Animation */
+.simple-hamburger.active {
+  background: transparent;
+  border: 2px solid #EEEDE8;
+}
+
+.simple-hamburger.active span {
+  background: #EEEDE8; /* Cream lines when active */
+}
+
+.simple-hamburger.active span:first-child {
+  transform: rotate(45deg) translate(4px, 4px);
+  width: 20px;
+}
+
+.simple-hamburger.active span:last-child {
+  transform: rotate(-45deg) translate(4px, -4px);
+  width: 20px;
+}
+
+/* Hover Effects */
+.simple-hamburger:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Mobile Menu Overlay - CREAM BACKGROUND */
+.otherPages-mobile-menu-overlay {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0);
+  z-index: 9998;
+  transition: all 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+  backdrop-filter: blur(0px);
+}
+
+.otherPages-mobile-menu-overlay.active {
+  right: 0;
+  background: rgba(238, 237, 232, 0.95); /* Cream background */
+  backdrop-filter: blur(10px);
+}
+
+.otherPages-mobile-menu-content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: #EEEDE8; /* Solid cream background */
+  padding: 80px 40px 40px 40px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  border-left: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+/* Subtle Background Elements - DARKER FOR CREAM BG */
+.menu-bg-elements {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.bg-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.05;
+  animation: floatBlob 12s ease-in-out infinite;
+}
+
+.blob-1 {
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  top: -150px;
+  right: -150px;
+  animation-delay: 0s;
+}
+
+.blob-2 {
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(45deg, #4facfe, #00f2fe);
+  bottom: -100px;
+  left: 10%;
+  animation-delay: -6s;
+}
+
+@keyframes floatBlob {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg) scale(1);
+  }
+  50% {
+    transform: translateY(-30px) rotate(180deg) scale(1.05);
+  }
+}
+
+/* Close Button - MINIMAL WITH DARK THEME */
+.otherPages-close-btn {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  cursor: pointer;
+  line-height: 1;
+  transition: all 0.3s ease;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10001;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.otherPages-close-btn:hover {
+  transform: scale(1.05);
+  border-color: rgba(0, 0, 0, 0.4);
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.close-icon {
+  position: relative;
+  width: 18px;
+  height: 18px;
+}
+
+.close-icon span {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1.5px;
+  background: #000000; /* Black close icon */
+  border-radius: 1px;
+  transition: all 0.3s ease;
+}
+
+.close-icon span:first-child {
+  transform: rotate(45deg);
+}
+
+.close-icon span:last-child {
+  transform: rotate(-45deg);
+}
+
+.otherPages-close-btn:hover .close-icon span {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* Navigation Links Container - PERFECT POSITION */
+.nav-links-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 60px;
+}
+
+/* Mobile Menu List - CHIPAK KE TEXT */
+.otherPages-mobile-menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px; /* BAHUT CHIPAK KE */
+  width: auto;
+}
+
+.otherPages-mobile-menu-list li {
+  list-style: none;
+  cursor: pointer;
+  padding: 8px 0; /* COMPACT PADDING */
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+  position: relative;
+  opacity: 0;
+  transform: translateX(20px);
+  border: none;
+  background: none;
+}
+
+.otherPages-mobile-menu-list li:hover {
+  transform: translateX(-3px);
+}
+
+.otherPages-mobile-menu-list li:hover .menu-text {
+  color: #000000;
+  opacity: 1;
+}
+
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.menu-text {
+  font-size: 4rem; /* THODA BADA TEXT */
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.8); /* Dark text for cream background */
+  letter-spacing: -2px; /* COMPACT LETTER SPACING */
+  text-transform: none;
+  transition: all 0.3s ease;
+  font-family: 'Inter', sans-serif;
+  line-height: 0.85; /* CHIPAK KE LINE HEIGHT */
+  text-align: left;
+  display: block;
+}
+
+.menu-text::after {
+  content: '';
+  position: absolute;
+  bottom: 4px; /* CLOSER TO TEXT */
+  left: 0;
+  width: 0;
+  height: 3px; /* THICKER UNDERLINE */
+  background: rgba(0, 0, 0, 0.8); /* Dark underline */
+  transition: width 0.3s ease;
+}
+
+.otherPages-mobile-menu-list li:hover .menu-text::after {
+  width: 100%;
+}
+
+/* Contact Info */
+.otherPages-contact-info {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding-top: 40px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease 0.6s both;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.contact-email {
+  margin-bottom: 40px;
+}
+
+.contact-email h4,
+.social-links h4 {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.6); /* Darker for cream background */
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 12px;
+  font-family: 'Inter', sans-serif;
+}
+
+.contact-email p {
+  font-size: 1.1rem;
+  color: rgba(0, 0, 0, 0.9); /* Dark text */
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  font-family: 'Inter', sans-serif;
+}
+
+.social-icons {
+  display: flex;
+  gap: 25px;
+}
+
+.social-icons a {
+  color: rgba(0, 0, 0, 0.8); /* Dark links */
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.2s ease;
+  position: relative;
+  padding: 6px 0;
+  font-family: 'Inter', sans-serif;
+}
+
+.social-icons a:hover {
+  color: #000000;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .otherPagesNav {
+    padding: 0 25px;
+    height: 60px;
+  }
+
+  .simple-hamburger {
+    width: 45px;
+    height: 45px;
+  }
+
+  .simple-hamburger span {
+    width: 18px;
+  }
+
+  .otherPages-mobile-menu-content {
+    padding: 70px 30px 30px 30px;
+  }
+
+  .nav-links-container {
+    margin-left: 40px;
+    justify-content: flex-start;
+  }
+
+  .menu-text {
+    font-size: 3.5rem; /* SLIGHTLY SMALLER ON TABLET */
+    line-height: 0.9;
+  }
+
+  .otherPages-close-btn {
+    top: 25px;
+    right: 25px;
+    width: 42px;
+    height: 42px;
+  }
+
+  .simple-hamburger.active span:first-child {
+    transform: rotate(45deg) translate(3px, 3px);
+    width: 18px;
+  }
+
+  .simple-hamburger.active span:last-child {
+    transform: rotate(-45deg) translate(3px, -3px);
+    width: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .otherPagesNav {
+    padding: 0 20px;
+    height: 55px;
+  }
+
+  .simple-hamburger {
+    width: 42px;
+    height: 42px;
+    gap: 3px;
+  }
+
+  .simple-hamburger span {
+    width: 16px;
+    height: 1.5px;
+  }
+
+  .otherPages-mobile-menu-content {
+    padding: 60px 20px 20px 20px;
+  }
+
+  .nav-links-container {
+    margin-left: 20px;
+    justify-content: flex-start;
+  }
+
+  .menu-text {
+    font-size: 3rem; /* PERFECT SIZE FOR MOBILE */
+    line-height: 0.95;
+  }
+
+  .otherPages-mobile-menu-list {
+    gap: 1px; /* EVEN TIGHTER ON MOBILE */
+  }
+
+  .social-icons {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .otherPages-close-btn {
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .simple-hamburger.active span:first-child {
+    transform: rotate(45deg) translate(2px, 2px);
+    width: 16px;
+  }
+
+  .simple-hamburger.active span:last-child {
+    transform: rotate(-45deg) translate(2px, -2px);
+    width: 16px;
+  }
+}
+
+@media (max-width: 375px) {
+  .otherPagesNav {
+    padding: 0 15px;
+  }
+
+  .simple-hamburger {
+    width: 40px;
+    height: 40px;
+  }
+
+  .otherPages-mobile-menu-content {
+    padding: 50px 15px 15px 15px;
+  }
+
+  .nav-links-container {
+    margin-left: 15px;
+  }
+
+  .menu-text {
+    font-size: 2.6rem;
+    line-height: 1;
+  }
+
+  .otherPages-close-btn {
+    top: 15px;
+    right: 15px;
+  }
+}
+
+/* SMOOTH SCROLLING */
+html {
+  scroll-behavior: smooth;
+}
+
+body.menu-open {
+  overflow: hidden;
+}
