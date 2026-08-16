@@ -221,7 +221,7 @@ function Nav() {
             <li>Contact</li>
           </Link>
 
-          <li onClick={() => { window.open("Ayush_Bhandarkar_Resume (1).pdf", "_blank"); setOpen(false); }}>
+          <li onClick={() => { window.open("Ayush_Bhandarkar_Resume (2).pdf", "_blank"); setOpen(false); }}>
             Resume
           </li>
         </ul>
