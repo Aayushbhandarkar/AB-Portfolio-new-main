@@ -90,19 +90,61 @@ function About() {
   }, []);
 
   const skillsData = [
-    {
-      category: "Languages & Data",
-      items: ["Java", "JavaScript", "C++", "SQL", "MongoDB", "Git", "GitHub", "PHP"]
-    },
-    {
-      category: "Frameworks & Libraries",
-      items: ["React", "Node.js", "Express.js", "Tailwind CSS", "GSAP", "Firebase", "Spring Boot","Laravel"]
-    },
-    {
-      category: "Tools & Concepts",
-      items: ["Postman", "DSA", "DBMS", "OS", "IPv4", "DNS", "IPv6", "System Config","Linux"]
-    }
-  ];
+  {
+    category: "Languages & Data",
+    items: [
+      "Java",
+      "JavaScript",
+      "C++",
+      "PHP",
+      "SQL",
+      "MySQL",
+      "MongoDB",
+      "Git",
+      "GitHub"
+    ]
+  },
+  {
+    category: "Frameworks & Libraries",
+    items: [
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "Laravel",
+      "Spring Boot",
+      "Tailwind CSS",
+      "Bootstrap",
+      "GSAP",
+      "Redux Toolkit",
+      "React Router",
+      "Mongoose",
+      "Socket.io"
+    ]
+  },
+  {
+    category: "Tools & Concepts",
+    items: [
+      "Postman",
+      "DSA",
+      "OOP",
+      "DBMS",
+      "OS",
+      "REST APIs",
+      "JWT",
+      "CRUD",
+      "MVC",
+      "Linux",
+      "Docker",
+      "Firebase",
+      "WordPress",
+      "Elementor",
+      "IPv4",
+      "IPv6",
+      "DNS",
+      "HTTP/HTTPS"
+    ]
+  }
+];
 
   const developerTitles = ["DEVELOPER", "DESIGNER", "CREATOR /"];
 
