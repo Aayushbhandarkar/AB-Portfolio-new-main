@@ -8,7 +8,7 @@ import About from './components/About/About';
 import Experience from './components/Experience/Experience';
 import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
-import VoiceAssistant from './components/VoiceAssistant/VoiceAssistant';  // ✅ NEW
+import VoiceAssistant from './components/VoiceAssistant/VoiceAssistant';
 
 function App() {
   const [showWhiteNav, setShowWhiteNav] = useState(true);
@@ -16,9 +16,9 @@ function App() {
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY < 80) {
-        setShowWhiteNav(true);    // HOME — White nav
+        setShowWhiteNav(true);
       } else {
-        setShowWhiteNav(false);   // Other pages — Circle nav
+        setShowWhiteNav(false);
       }
     };
 
@@ -28,48 +28,47 @@ function App() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
- return (
-  <>
-    {/* NAV DEPENDS ON SCROLL */}
-    {showWhiteNav ? <Nav /> : <OtherPagesNav />}
+  return (
+    <>
+      {/* NAV DEPENDS ON SCROLL */}
+      {showWhiteNav ? <Nav /> : <OtherPagesNav />}
 
-    {/* HOME */}
-    <div id="home">
-      <Home />
-    </div>
+      {/* HOME */}
+      <div id="home">
+        <Home />
+      </div>
 
-    {/* ABOUT NOW COMES 2ND */}
-    <div id="about">
-      <About />
-    </div>
+      {/* ABOUT */}
+      <div id="about">
+        <About />
+      </div>
 
-    {/* PROJECT NOW COMES 3RD */}
-    <div id="projects">
-      <Project />
-    </div>
+      {/* EXPERIENCE */}
+      <div id="experience">
+        <Experience />
+      </div>
 
-    {/* SERVICES NOW COMES AFTER PROJECT */}
-    <div id="services">
-      <Services />
-    </div>
+      {/* PROJECTS */}
+      <div id="projects">
+        <Project />
+      </div>
 
-    {/* EXPERIENCE */}
-    <div id="experience">
-      <Experience />
-    </div>
+      {/* SERVICES */}
+      <div id="services">
+        <Services />
+      </div>
 
-    {/* CONTACT */}
-    <div id="contact">
-      <Contact />
-    </div>
+      {/* CONTACT */}
+      <div id="contact">
+        <Contact />
+      </div>
 
-    <Footer />
+      <Footer />
 
-    {/* ALWAYS VISIBLE VOICE BTN */}
-    <VoiceAssistant />
-  </>
-);
-
+      {/* ALWAYS VISIBLE VOICE BTN */}
+      <VoiceAssistant />
+    </>
+  );
 }
 
 export default App;
