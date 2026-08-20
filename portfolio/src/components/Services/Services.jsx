@@ -111,7 +111,7 @@ function Services() {
       title: "Full-Stack Development",
       text: "From frontend interactions to backend APIs, I build complete web solutions. I work with modern stacks to deliver apps that are scalable, maintainable, and ready for real-world users.",
       tech: [
-        "React, Node.js, Express.js",
+        "React, Node.js, Express.js, Java, Spring boot ",
         "REST APIs, Firebase", 
         "Git, GitHub, Postman"
       ]
